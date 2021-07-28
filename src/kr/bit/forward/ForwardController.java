@@ -17,7 +17,7 @@ public class ForwardController extends HttpServlet {
 			throws ServletException, IOException {
 
 		// int su=100;
-		String data = "setAttribut";
+		String data = "setAttribute";
 		String apple = "getParameter";
 		request.setAttribute("data", data);
 		// View page(result.jsp)로 data를 전달 하여 View page에서 출력
