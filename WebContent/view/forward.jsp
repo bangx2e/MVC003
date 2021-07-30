@@ -9,9 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%=vo.getName() %>
-<%=vo.getAge() %>
-<%=vo.getEmail() %>
-<%=vo.getAge() %>
+이름 : <%=vo.getName() %>
+나이 : <%=vo.getAge() %>
+이메일 : <%=vo.getEmail() %>
 </body>
 </html>
