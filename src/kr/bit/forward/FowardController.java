@@ -9,24 +9,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.bit.model.MemberVO;
+
 @WebServlet("/fc.do")
-public class ForwardController extends HttpServlet {
+public class FowardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String name = "Lim";
+		int age = 31;
+		String email = "zzanga9244@naver.com";
 
-		// int su=100;
-		String data = "setAttribute";
-		String apple = "getParameter";
-		request.setAttribute("data", data);
-		// View page(result.jsp)로 data를 전달 하여 View page에서 출력
-		// Controller에서 View로 페이지를 전환하는 방법
-		// 1. redirect
-		// 2. forward
-		response.sendRedirect("view/result.jsp?data="+apple);
-		// RequestDispatcher rd = new requestDispatcher();
-
+		MemberVO vo = new MemberVO();
+		vo.setAge(age);
+		vo.setName(name);
+		vo.setEmail(email);
+		// foward.jsp
+		// 객체 바인딩
+		request.setAttribute("vo", vo);
+		RequestDispatcher rd = request.getRequestDispatcher("view/forward.jsp");
+		rd.forward(request, response);
 	}
 
 }
