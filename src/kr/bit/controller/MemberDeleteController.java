@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.bit.model.MemberDAO;
 
-@WebServlet("/memberDel.do")
+@WebServlet("/memberDelete.do")
 public class MemberDeleteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -19,7 +19,7 @@ public class MemberDeleteController extends HttpServlet {
 		int rs = dao.memberDelete(num);
 		if(rs>0) {
 			System.out.println("삭제 성공");
-			response.sendRedirect("/MVC01/memberList.do");
+			response.sendRedirect("/MVC03/memberList.do");
 		} else {
 			throw new ServletException("삭제 실패");
 		}
