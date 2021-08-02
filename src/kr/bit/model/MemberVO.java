@@ -7,7 +7,7 @@ public class MemberVO {
 	private String pass;
 	private String name;
 	private int age;
-	private String email;
+	private String mail;
 	private String phone;
 	public MemberVO() {
 		
@@ -18,7 +18,7 @@ public class MemberVO {
 		this.pass = pass;
 		this.name = name;
 		this.age = age;
-		this.email = email;
+		this.mail = email;
 		this.phone = phone;
 	}
 		public MemberVO(int num, String id, String pass, String name, int age, String email, String phone) {
@@ -28,7 +28,7 @@ public class MemberVO {
 		this.pass = pass;
 		this.name = name;
 		this.age = age;
-		this.email = email;
+		this.mail = email;
 		this.phone = phone;
 	}
 
@@ -73,11 +73,11 @@ public class MemberVO {
 	}
 
 	public String getEmail() {
-		return email;
+		return mail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getPhone() {
@@ -90,8 +90,8 @@ public class MemberVO {
 
 	@Override
 	public String toString() {
-		return "MemberVO [num=" + num + ", id=" + id + ", pass=" + pass + ", name=" + name + ", age=" + age + ", email="
-				+ email + ", phone=" + phone + "]";
+		return "MemberVO [num=" + num + ", id=" + id + ", pass=" + pass + ", name=" + name + ", age=" + age + ", mail="
+				+ mail + ", phone=" + phone + "]";
 	}
 	
 }
