@@ -21,7 +21,7 @@
 		<table class='table table-bordered'>
 			<c:if test="${vo !=null}">
 				<tr>
-					<td colspan='2'>${vo.name}회원의 상세보기</td>
+					<td colspan='2'>${vo.name}회원의 상세보기!</td>
 				</tr>
 				<tr>
 					<td>번호</td>
